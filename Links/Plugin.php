@@ -5,7 +5,7 @@
  * @package Links
  * @author Viosey & Hanny
  * @version 1.0.0
- * @link https://www.viosey.com
+ * @link https://viosey.com
  *
  */
 class Links_Plugin implements Typecho_Plugin_Interface
