@@ -34,7 +34,7 @@ class Links_Action extends Typecho_Widget implements Widget_Interface_Do
 		$link = array(
 			'name' => "Viosey",
 			'url' => "https://viosey.com",
-			'image' => "https://viosey.com/res/avatar.png",
+			'image' => "https://viosey.com/img/avatar.png",
 		);
 		$link['order'] = $this->db->fetchObject($this->db->select(array('MAX(order)' => 'maxOrder'))->from($this->prefix.'links'))->maxOrder + 1;
 
