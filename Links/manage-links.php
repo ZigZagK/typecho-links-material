@@ -12,7 +12,6 @@ include 'menu.php';
                 <div class="col-mb-12">
                     <ul class="typecho-option-tabs clearfix">
                         <li class="current"><a href="<?php $options->adminUrl('extending.php?panel=Links%2Fmanage-links.php'); ?>"><?php _e('友情链接'); ?></a></li>
-						<li><a href=<?php $options->index('/action/links-edit?do=addhanny'); ?> title="如果你喜欢，可以添加viosey。"><?php _e('添加viosey'); ?></a></li>
                         <li><a href="http://www.imhan.com/archives/typecho-links/" title="查看友情链接使用帮助" target="_blank"><?php _e('帮助'); ?></a></li>
                     </ul>
                 </div>
