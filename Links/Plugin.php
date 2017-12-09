@@ -1,11 +1,11 @@
 <?php
 /**
- * 	用于MaterialDesign-TypechoTheme的友情链接插件，基于Hanny的友情链接插件
+ * 友情链接插件，用于 Material 主题
  *
  * @package Links
- * @author Viosey & Hanny
- * @version 1.0.0
- * @link https://viosey.com
+ * @author Hanny
+ * @version 1.1.1
+ * @link http://www.imhan.com
  *
  */
 class Links_Plugin implements Typecho_Plugin_Interface
