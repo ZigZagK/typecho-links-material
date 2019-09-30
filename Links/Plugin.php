@@ -220,9 +220,9 @@ class Links_Plugin implements Typecho_Plugin_Interface
 	}
 
     /**
-     * 控制输出格式
+     * 输出解析后的友链数组
      */
-	public static function output_str($pattern=NULL, $links_num=0, $sort=NULL)
+	public static function output($pattern=NULL, $links_num=0, $sort=NULL)
 	{
 		$options = Typecho_Widget::widget('Widget_Options');
 		if (!isset($options->plugins['activated']['Links'])) {
@@ -252,24 +252,18 @@ class Links_Plugin implements Typecho_Plugin_Interface
 			$sql = $sql->limit($links_num);
 		}
 		$links = $db->fetchAll($sql);
-		$str = "";
+		$number = 0;
 		foreach ($links as $link) {
 			if ($link['image'] == NULL) {
 				$link['image'] = $nopic_url;
 			}
-			$str .= str_replace(
+			$Links[$number++] = str_replace(
 				array('{lid}', '{name}', '{url}', '{sort}', '{title}', '{description}', '{image}', '{user}'),
 				array($link['lid'], $link['name'], $link['url'], $link['sort'], $link['description'], $link['description'], $link['image'], $link['user']),
 				$pattern
 			);
 		}
-		return $str;
-	}
-
-	//输出
-	public static function output($pattern=NULL, $links_num=0, $sort=NULL)
-	{
-		echo Links_Plugin::output_str($pattern, $links_num, $sort);
+		return $Links;
 	}
 
     /**
